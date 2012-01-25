@@ -1,18 +1,22 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>Chromattic</title><link xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" href="css/base.css" rel="stylesheet" type="text/css"><link xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" href="css/style.css" rel="stylesheet" type="text/css"><link xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" href="css/guide.css" rel="stylesheet" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body><div class="book" title="Chromattic"><div xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div class="title"><div><h1 class="title"><a name="d5e1"></a>Chromattic</h1></div><div><h2 class="subtitle">Chromattic Reference Guide</h2></div></div><div><div class="author"><h3 class="author"><span class="firstname">Julien</span> <span class="surname">Viet</span></h3><div class="affiliation">
+   <title>Chromattic</title><link href="css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"><script src="js/bootstrap/jquery-1.7.1.min.js"></script><script src="js/bootstrap/bootstrap-dropdown.js"></script><script src="js/bootstrap/bootstrap-modal.js"></script><script src="js/bootstrap/docbook.js"></script><script src="js/bootstrap/google-code-prettify/prettify.js"></script><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="Chromattic"><div class="titlepage"><div><div><h1 class="title"><a name="d5e1"></a>Chromattic</h1></div><div><h2 class="subtitle">Chromattic Reference Guide</h2></div><div><div class="authorgroup">
+    <div class="author"><h3 class="author"><span class="firstname">Julien</span> <span class="surname">Viet</span></h3><div class="affiliation">
         <span class="shortaffil">eXo Platform<br></span>
-      </div></div></div><div><div class="author"><h3 class="author"><span class="firstname">Alain</span> <span class="surname">Defrance</span></h3><div class="affiliation">
+      </div></div>
+    <div class="author"><h3 class="author"><span class="firstname">Alain</span> <span class="surname">Defrance</span></h3><div class="affiliation">
         <span class="shortaffil">eXo Platform<br></span>
-      </div></div></div><div><p class="copyright">Copyright &copy; 2010 eXo Platform SAS</p></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="preface"><a href="#d5e28">Preface</a></span></dt><dt><span class="chapter"><a href="#d5e85">1. Getting started with Chromattic</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e88">1.1. The website example</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d5e252">2. Type mapping</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e255">2.1. Primary type mapping</a></span></dt><dt><span class="section"><a href="#d5e259">2.2. Property mapping</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d5e460">3. Hierarchical mapping</a></span></dt><dd><dl><dt><span class="section"><a href="#hierarchical_onetomany_section">3.1. One-to-many/many-to-one hierarchical relationship mapping </a></span></dt><dt><span class="section"><a href="#d5e603">3.2. One-to-one hierarchical relationship mapping</a></span></dt></dl></dd><dt><span class="chapter"><a href="#reference_relationship_section">4. Reference mapping </a></span></dt><dd><dl><dt><span class="section"><a href="#d5e673">4.1. One-to-many/many-to-one reference relationship mapping</a></span></dt><dt><span class="section"><a href="#d5e712">4.2. One-to-many/many-to-one path relationship mapping</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d5e715">5. Groovy integration</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e717">5.1. Differences with the java version</a></span></dt><dt><span class="section"><a href="#d5e741">5.2. Building a Groovy project with Chromattic</a></span></dt><dt><span class="section"><a href="#d5e768">5.3. Runtime dependencies</a></span></dt><dt><span class="section"><a href="#d5e775">5.4. How to access to JCR data through Chromattic objects in Groovy</a></span></dt></dl></dd></dl></div><div class="list-of-examples"><p><b>List of Examples</b></p><dl><dt>1. <a href="#d5e53">Directory listing with the JCR native API</a></dt><dt>2. <a href="#d5e58">Directory listing with Chromattic objects</a></dt><dt>1.1. <a href="#d5e116">The Page class</a></dt><dt>1.2. <a href="#d5e160">The org.chromattic.docs.reference.gettingstarted.package-info.java file package</a></dt><dt>3.1. <a href="#d5e577">Moving a child from the first position to the last position</a></dt><dt>3.2. <a href="#d5e588">Child insertion</a></dt><dt>3.3. <a href="#d5e593">Obtaining a particular child</a></dt><dt>3.4. <a href="#d5e598">Child removal</a></dt><dt>3.5. <a href="#d5e627">The rootPage property</a></dt><dt>3.6. <a href="#d5e632">The site property</a></dt></dl></div>
+      </div></div>
+  </div></div><div><p class="copyright">Copyright &copy; 2010 eXo Platform SAS</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><ul><li><span class="preface"><a href="#d5e28">Preface</a></span></li><li><span class="chapter"><a href="#d5e85">1. Getting started with Chromattic</a></span><ul><li><span class="section"><a href="#d5e88">The website example</a></span><ul><li><span class="section"><a href="#d5e91">The Page object</a></span></li><li><span class="section"><a href="#d5e150">The JCR node types</a></span></li><li><span class="section"><a href="#d5e167">The client</a></span></li><li><span class="section"><a href="#d5e222">Project build</a></span></li><li><span class="section"><a href="#d5e248">Running the client</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#d5e252">2. Type mapping</a></span><ul><li><span class="section"><a href="#d5e255">Primary type mapping</a></span></li><li><span class="section"><a href="#d5e259">Property mapping</a></span><ul><li><span class="section"><a href="#d5e261">Property type mapping</a></span></li><li><span class="section"><a href="#d5e360">Simple property mapping</a></span></li><li><span class="section"><a href="#d5e432">Residual property mapping</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#d5e460">3. Hierarchical mapping</a></span><ul><li><span class="section"><a href="#hierarchical_onetomany_section">One-to-many/many-to-one hierarchical relationship mapping </a></span><ul><li><span class="section"><a href="#d5e503">Adding a child node</a></span></li><li><span class="section"><a href="#d5e540">Destroying a node</a></span></li><li><span class="section"><a href="#d5e565">Collection types</a></span></li></ul></li><li><span class="section"><a href="#d5e603">One-to-one hierarchical relationship mapping</a></span></li></ul></li><li><span class="chapter"><a href="#reference_relationship_section">4. Reference mapping </a></span><ul><li><span class="section"><a href="#d5e673">One-to-many/many-to-one reference relationship mapping</a></span></li><li><span class="section"><a href="#d5e712">One-to-many/many-to-one path relationship mapping</a></span></li></ul></li><li><span class="chapter"><a href="#d5e715">5. Groovy integration</a></span><ul><li><span class="section"><a href="#d5e717">Differences with the java version</a></span></li><li><span class="section"><a href="#d5e741">Building a Groovy project with Chromattic</a></span><ul><li><span class="section"><a href="#d5e745">Building with Maven</a></span></li><li><span class="section"><a href="#d5e751">Building with ANT</a></span></li><li><span class="section"><a href="#d5e759">Compiling with <span class="italic">groovyc</span>
+        </a></span></li></ul></li><li><span class="section"><a href="#d5e768">Runtime dependencies</a></span></li><li><span class="section"><a href="#d5e775">How to access to JCR data through Chromattic objects in Groovy</a></span></li></ul></li></ul></div><div class="list-of-examples"><p><b>List of Examples</b></p><ul><li>1. <a href="#d5e53">Directory listing with the JCR native API</a></li><li>2. <a href="#d5e58">Directory listing with Chromattic objects</a></li><li>1.1. <a href="#d5e116">The Page class</a></li><li>1.2. <a href="#d5e160">The org.chromattic.docs.reference.gettingstarted.package-info.java file package</a></li><li>3.1. <a href="#d5e577">Moving a child from the first position to the last position</a></li><li>3.2. <a href="#d5e588">Child insertion</a></li><li>3.3. <a href="#d5e593">Obtaining a particular child</a></li><li>3.4. <a href="#d5e598">Child removal</a></li><li>3.5. <a href="#d5e627">The rootPage property</a></li><li>3.6. <a href="#d5e632">The site property</a></li></ul></div>
   
-  <div class="preface" title="Preface"><div class="titlepage"><div><div><h1 xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook"><a name="d5e28"></a>Preface</h1></div></div></div>
+  <div class="preface" title="Preface"><div class="titlepage"><div><div><h2 class="title"><a name="d5e28"></a>Preface</h2></div></div></div>
     
     <p>Chromattic development started during July 2009 when I had to develop a rich model called MOP (Model Object for Portals) that was persisted in a JCR repository. The development started with the prototyping of the model as a set of Java interfaces, just bare interfaces plus a set of value objects. Once I was satisfied with the initial model, I decided it was time to write the JCR persistence implementation and quickly I realized that I would not be able to achieve it without the help of a tool.</p>
     <p>Obviously the idea of using a mapping framework stroke me and I fell in the Not Invented Here syndrom for some reason.</p>
     <p>If you are reading this chapter it's probably because you are not yet convinced that Chromattic can do something useful for you (if you are already convinced, read this chapter anyway so you can convince other persons) and <span class="italic">some reason</span> is probably not enough to convince you.</p>
     <p>JCR defines a set of base node types for modelling a file system and that's a perfect example to use:</p>
-    <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+    <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
         <p>
           <code class="code">nt:hierarchyNode</code>: a super type for file and folder, its purpose is mainly to define a common node type for children of a folder</p>
       </li><li class="listitem">
@@ -31,24 +35,24 @@
     <p>
       </p><div class="example"><a name="d5e53"></a><p class="title"><b>Example&nbsp;1.&nbsp;Directory listing with the JCR native API</b></p><div class="example-contents">
         
-        <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">private</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> list(Node node) <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">throws</span> RepositoryException {
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (!node.isNodeType(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"nt:hierarchyNode"</span>)) {
-      <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">throw</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">new</span> IllegalArgumentException(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"The provided node is not a hierarchy node"</span>);
+        <div class="programlistingco"><pre class="programlisting language-java">  private void list(Node node) throws RepositoryException {
+    if (!node.isNodeType("nt:hierarchyNode")) {
+      throw new IllegalArgumentException("The provided node is not a hierarchy node");
     }
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (node.isNodeType(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"nt:file"</span>)) {
-      <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (node.hasNode(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"jcr:content"</span>)) {
-        Node content = node.getNode(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"jcr:content"</span>);
+    if (node.isNodeType("nt:file")) {
+      if (node.hasNode("jcr:content")) {
+        Node content = node.getNode("jcr:content");
         String encoding = null;
-        <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (content.hasProperty(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"jcr:encoding"</span>)) {
-          encoding = content.getProperty(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"jcr:encoding"</span>).getString();
+        if (content.hasProperty("jcr:encoding")) {
+          encoding = content.getProperty("jcr:encoding").getString();
         }
-        String mimeType = content.getProperty(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"jcr:mimeType"</span>).getString();
-        System.out.println(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"File[name="</span> + node.getName() + <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">",mime-type="</span> + mimeType +
-          <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">",encoding="</span> + encoding +  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"]"</span>);
+        String mimeType = content.getProperty("jcr:mimeType").getString();
+        System.out.println("File[name=" + node.getName() + ",mime-type=" + mimeType +
+          ",encoding=" + encoding +  "]");
       }
-    } <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">else</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (node.isNodeType(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"nt:folder"</span>)) {
-      System.out.println(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"Folder["</span> + node.getName() + <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"]"</span>);
-      <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">for</span> (NodeIterator i = node.getNodes();i.hasNext();) {
+    } else if (node.isNodeType("nt:folder")) {
+      System.out.println("Folder[" + node.getName() + "]");
+      for (NodeIterator i = node.getNodes();i.hasNext();) {
         list(i.nextNode());
       }
     }
@@ -56,18 +60,18 @@
       </div></div><p><br class="example-break">
       </p><div class="example"><a name="d5e58"></a><p class="title"><b>Example&nbsp;2.&nbsp;Directory listing with Chromattic objects</b></p><div class="example-contents">
         
-        <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">private</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> list(NTHierarchyNode hierarchy) {
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (hierarchy <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">instanceof</span> NTFile) {
+        <div class="programlistingco"><pre class="programlisting language-java">  private void list(NTHierarchyNode hierarchy) {
+    if (hierarchy instanceof NTFile) {
       NTFile file = (NTFile)hierarchy;
       Resource content = file.getContentResource();
-      <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">if</span> (content != null) {
-        System.out.println(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"File[name="</span> + file.getName() + <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">",mime-type="</span> + content.getMimeType() +
-          <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">",encoding="</span> + content.getEncoding() +  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"]"</span>);
+      if (content != null) {
+        System.out.println("File[name=" + file.getName() + ",mime-type=" + content.getMimeType() +
+          ",encoding=" + content.getEncoding() +  "]");
       }
-    } <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">else</span> {
+    } else {
       NTFolder folder = (NTFolder)hierarchy;
-      System.out.println(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"Folder["</span> + folder.getName() + <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"]"</span>);
-      <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">for</span> (NTHierarchyNode child : folder.getChildren().values()) {
+      System.out.println("Folder[" + folder.getName() + "]");
+      for (NTHierarchyNode child : folder.getChildren().values()) {
         list(child);
       }
     }
@@ -75,80 +79,80 @@
       </div></div><p><br class="example-break">
     </p>
     <p>There are several difference between the two versions, but the most important one is <span class="bold"><strong>type safety</strong></span>. The JCR version use <code class="code">javax.jcr.Node</code> objects and the main drawback is that the effective type of a node is never known until runtime. Chromattic main purpose is to provide type safety to Java programs that use JCR:</p>
-    <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+    <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
         <p>The <code class="code">list</code> method argument is typed with <code class="code">NTHierarchyNode</code> and that guarantees that the method will never be invoked with an appropriate node type, this guarantee is enforced during the compilation of any program that wants to invoke the <code class="code">list</code> method.</p>
       </li><li class="listitem">
         <p>The <code class="code">instanceof</code> operator is what a Java developer uses when he wants to determine the type of an object. The JCR version performs the same operation but there is more work to do.</p>
       </li></ul></div>
     <p>The second benefit is object oriented programming: each node turns into a Chromattic object, and on that object you can add any method you need to. This is just what we use in this example with the <code class="code">getContentResource()</code> method on the <code class="code">NTFile</code> object.</p>
     <p>The third benefit is productivity: modern IDEs provide an impressive set of tools that gives a lot of power to the developer, Chromattic type safe and object oriented nature is a perfect fit:</p>
-    <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+    <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
         <p>A Chromattic object is a Java object and the IDE is able to perform code completion.</p>
       </li><li class="listitem">
         <p>Refactoring is a commodity offered by any IDE that can be leveraged on a Chromattic model.</p>
       </li></ul></div>
     <p>There are many other reasons left to use Chromattic, let's discover them in this guide. </p>
   </div>
-  <div class="chapter" title="Chapter&nbsp;1.&nbsp;Getting started with Chromattic"><div class="titlepage"><div><div><h1 xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook"><a name="d5e85"></a>Chapter&nbsp;1.&nbsp;Getting started with Chromattic</h1></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;1.&nbsp;Getting started with Chromattic"><div class="titlepage"><div><div><h2 class="title"><a name="d5e85"></a>Chapter&nbsp;1.&nbsp;Getting started with Chromattic</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><ul><li><span class="section"><a href="#d5e88">The website example</a></span><ul><li><span class="section"><a href="#d5e91">The Page object</a></span></li><li><span class="section"><a href="#d5e150">The JCR node types</a></span></li><li><span class="section"><a href="#d5e167">The client</a></span></li><li><span class="section"><a href="#d5e222">Project build</a></span></li><li><span class="section"><a href="#d5e248">Running the client</a></span></li></ul></li></ul></div>
     
     <p>This chapter introduces you to the basic of Chromattic and the Java Content Repository to object mapping. We will show the most basic Chromattic application and focus on the various steps to build this application.</p>
-    <div class="section" title="1.1.&nbsp;The website example"><div class="titlepage"><div><div><h2 class="title"><a name="d5e88"></a>1.1.&nbsp;The website example</h2></div></div></div>
+    <div class="section" title="The website example"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e88"></a>The website example</h2></div></div></div>
       
       <p>The project example models a web site persisted in a JCR server. The site contains web pages that are organized according to a tree structure making easy to display the pages on the web. The natural JCR hierarchy tree shape will model the hierarchy of the pages.</p>
-      <div class="section" title="1.1.1.&nbsp;The Page object"><div class="titlepage"><div><div><h3 class="title"><a name="d5e91"></a>1.1.1.&nbsp;The Page object</h3></div></div></div>
+      <div class="section" title="The Page object"><div class="titlepage"><div><div><h3 class="title"><a name="d5e91"></a>The Page object</h3></div></div></div>
         
         <p>The <code class="code">org.chromattic.docs.reference.gettingstarted.Page</code> class is the object representation of a web page. The <code class="code">Page</code> object is mapped to the JCR <span class="italic">page</span> node type. The <code class="code">Page</code> class contains the properties we want for the representation of a web page:</p>
-        <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+        <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
             <p>The property <code class="code">name</code> is the web page name and is mapped to the JCR node name.</p>
           </li><li class="listitem">
             <p>The property <code class="code">title</code> is the page title and is mapped to the JCR <span class="italic">title</span> node property of type <code class="code">STRING</code>.</p>
           </li><li class="listitem">
             <p>The property <code class="code">content</code> is the page content and is mapped to the JCR <span class="italic">content</span> node property of type <code class="code">STRING</code>.</p>
           </li></ul></div>
-        <div class="important" title="Important">
+        <div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3>
           <p>The Javabean properties needs to be modelled as abstract methods because it allows Chromattic to implement them to make the mapping between objects and node possible.</p>
         </div>
         <p>
           <a name="getting_started_page_object"></a> </p><div class="example"><a name="d5e116"></a><p class="title"><b>Example&nbsp;1.1.&nbsp;The Page class</b></p><div class="example-contents">
             
-            <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+            <div class="programlistingco"><pre class="programlisting language-java">/**
  * The page of a site.
- */</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@PrimaryType(name = "gs:page")</span> <span class="co" id="2565496320430088208-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span> Page {
+ */
+@PrimaryType(name = "gs:page") <span class="co" id="3657409756943970668-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+public abstract class Page {
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Returns the page name.
    * @return the page name
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Name</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> String getName(); <span class="co" id="763546661828381461-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+   */
+  @Name
+  public abstract String getName(); <span class="co" id="7342958035635722233-co"><img src="images/callouts/2.png" alt="(2)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Returns the page title.
    * @return the page title
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "title")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> String getTitle(); <span class="co" id="2297275812496608361-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+   */
+  @Property(name = "title")
+  public abstract String getTitle(); <span class="co" id="4824664879868207822-co"><img src="images/callouts/3.png" alt="(3)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Updates the page title.
    * @param title the new page title
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setTitle(String title);
+   */
+  public abstract void setTitle(String title);
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Returns the page content.
    * @return the page content
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "content")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> String getContent(); <span class="co" id="2635817405719101633-co"><img src="images/callouts/4.png" alt="(4)"></span> 
+   */
+  @Property(name = "content")
+  public abstract String getContent(); <span class="co" id="2503506731780506189-co"><img src="images/callouts/4.png" alt="(4)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Updates the page content.
    * @param content the new page content
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setContent(String content);
+   */
+  public abstract void setContent(String content);
 
 }</pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
                   <p>The Page class is mapped to the page node type</p>
@@ -162,38 +166,38 @@
           </div></div><p><br class="example-break">
         </p>
         <p>Chromattic uses code annotations to declare which and how classes are mapped to node types. The most important annotation is the <code class="code">@org.chromattic.api.annotations.PrimaryType</code> that declares the mapping of a class to a node type. Our class is annotated with the <code class="code">@PrimaryType</code> annotation, the <code class="code">name</code> parameter specifies the name of the node type mapped to the class.</p>
-        <div class="note" title="Note">
+        <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
           <p>JCR defines two kinds of node types which are primary node type and mixin node type. By default we denote by node type a primary node type. Mixin node type can also be mapped by Chromattic that is explained in the chapter XYZ.</p>
         </div>
         <p>The <code class="code">@org.chromattic.api.annotations.Name</code> annotation targets Javabean property getters or setters and indicates that the property is mapped to the name of the node. Indeed each JCR node has a mandatory name and this is the way to expose it on a class. As a result the <code class="code">Page</code> <span class="italic">name</span> property is mapped to the node name.</p>
         <p>Like the <code class="code">@Name</code> annotation the <code class="code">@org.chromattic.api.annotations.Property</code> annotation targets Javabean properties. It specifies how a property is mapped to a node property. It has a mandatory <code class="code">name</code> parameter that specifies the node property name. The node property type does not need to be specified as it is deduced from the class property. In our example, we map the <span class="italic">content</span> Javabean property to a <span class="italic">content</span> node property.</p>
       </div>
-      <div class="section" title="1.1.2.&nbsp;The JCR node types"><div class="titlepage"><div><div><h3 class="title"><a name="d5e150"></a>1.1.2.&nbsp;The JCR node types</h3></div></div></div>
+      <div class="section" title="The JCR node types"><div class="titlepage"><div><div><h3 class="title"><a name="d5e150"></a>The JCR node types</h3></div></div></div>
         
         <p>Node types are important for JCR, they define the schema of the node data. In our application we have a <code class="code">page</code>   node type that is modelled after the <code class="code">Page</code> class. Chromattic can generate for you the node type definition   when the classes are compiled. It results in a <code class="code">nodetype.xml</code> file resources located in the class output of   the Java<sup>tm</sup> compiler.</p>
         <p>The annotation <code class="code">org.chromattic.api.annotations.NodeTypeDefs</code> instructs the compiler to generate the the node type definitions in the XML format that can be used by the JCR server to create the node type. The annotation targets a package and it generate the node type for any Chromattic class inside this package and in the sub packages.</p>
         <p>
           </p><div class="example"><a name="d5e160"></a><p class="title"><b>Example&nbsp;1.2.&nbsp;The org.chromattic.docs.reference.gettingstarted.package-info.java file package</b></p><div class="example-contents">
             
-            <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@NodeTypeDefs</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">package</span> org.chromattic.docs.reference.gettingstarted;
+            <div class="programlistingco"><pre class="programlisting language-java">@NodeTypeDefs package org.chromattic.docs.reference.gettingstarted;
 
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.annotations.NodeTypeDefs;</pre></div>
+import org.chromattic.api.annotations.NodeTypeDefs;</pre></div>
           </div></div><p><br class="example-break">
         </p>
-        <div class="warning" title="Warning">
+        <div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3>
           <p>The node type generation is still a work in progress and should be considered as an experimental feature</p>
         </div>
       </div>
-      <div class="section" title="1.1.3.&nbsp;The client"><div class="titlepage"><div><div><h3 class="title"><a name="d5e167"></a>1.1.3.&nbsp;The client</h3></div></div></div>
+      <div class="section" title="The client"><div class="titlepage"><div><div><h3 class="title"><a name="d5e167"></a>The client</h3></div></div></div>
         
         <p>We have designed and mapped our <code class="code">Page</code> object and now we will examine how to interact with a JCR server via Chromattic. The goal of the client is very simple and focus on demonstrating the bootstrap of Chromattic and the persistence of a simple <code class="code">Page</code> in the Java Content Repository.</p>
-        <div class="section" title="1.1.3.1.&nbsp;Chromattic bootstrap"><div class="titlepage"><div><div><h4 class="title"><a name="d5e172"></a>1.1.3.1.&nbsp;Chromattic bootstrap</h4></div></div></div>
+        <div class="section" title="Chromattic bootstrap"><div class="titlepage"><div><div><h4 class="title"><a name="d5e172"></a>Chromattic bootstrap</h4></div></div></div>
           
           <p>The boostrap is the creation and the configuration of the Chromattic runtime. Usually the bootstrap occurs during the initialization of the application, for instance in a web application, it is most often performed in a <code class="code">ServletContextListener</code> initialization.</p>
           <p>Chromattic bootstrap relies mainly on the <code class="code">ChromatticBuilder</code> object. The builder is configured with the Chromattic application classes to obtain an instance of the <code class="code">Chromattic</code> object. The <code class="code">Chromattic</code> object can be used to create <code class="code">ChromatticSession</code> objects. The <code class="code">ChromatticSession</code> is the main runtime API used to interract with Chromattic.</p>
-          <div class="programlistingco"><pre class="programlisting">    ChromatticBuilder builder = ChromatticBuilder.create(); <span class="co" id="6319433132791003699-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    builder.add(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>); <span class="co" id="7182521281222302434-co"><img src="images/callouts/2.png" alt="(2)"></span> 
-    Chromattic chromattic = builder.build(); <span class="co" id="7894629597725296380-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+          <div class="programlistingco"><pre class="programlisting language-java">    ChromatticBuilder builder = ChromatticBuilder.create(); <span class="co" id="1328529234066279880-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    builder.add(Page.class); <span class="co" id="3293005929224633182-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+    Chromattic chromattic = builder.build(); <span class="co" id="7602217551053142110-co"><img src="images/callouts/3.png" alt="(3)"></span> 
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
                 <p>Creates the builder object</p>
               </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/2.png" alt="2" border="0"></p></td><td valign="top" align="left">
@@ -202,20 +206,20 @@
                 <p>Now the Chromattic object can be created</p>
               </td></tr></table></div></div>
         </div>
-        <div class="section" title="1.1.3.2.&nbsp;Interacting with Chromattic objects"><div class="titlepage"><div><div><h4 class="title"><a name="d5e195"></a>1.1.3.2.&nbsp;Interacting with Chromattic objects</h4></div></div></div>
+        <div class="section" title="Interacting with Chromattic objects"><div class="titlepage"><div><div><h4 class="title"><a name="d5e195"></a>Interacting with Chromattic objects</h4></div></div></div>
           
           <p>We have just explained how to obtain a <code class="code">Chromattic</code> object thanks to the builder. Now it is time to show how to obtain and use the <code class="code">ChromatticSession</code> with the goal to insert a new page node. Let's examine the code:</p>
-          <div class="programlistingco"><pre class="programlisting">    ChromatticSession session = chromattic.openSession(); <span class="co" id="1895771487618733982-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">try</span>
+          <div class="programlistingco"><pre class="programlisting language-java">    ChromatticSession session = chromattic.openSession(); <span class="co" id="7837344380978858346-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    try
     {
-      Page page = session.insert(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>, <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"index"</span>); <span class="co" id="6660640072607265535-co"><img src="images/callouts/2.png" alt="(2)"></span> 
-      page.setTitle(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"Hello Page"</span>); <span class="co" id="3244130958892676211-co"><img src="images/callouts/3.png" alt="(3)"></span> 
-      page.setContent(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"Hello World"</span>); <span class="co" id="8531815634377821326-co"><img src="images/callouts/4.png" alt="(4)"></span> 
-      session.save(); <span class="co" id="4112830084590630281-co"><img src="images/callouts/5.png" alt="(5)"></span> 
+      Page page = session.insert(Page.class, "index"); <span class="co" id="6103416827946168049-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+      page.setTitle("Hello Page"); <span class="co" id="5725014805111487934-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+      page.setContent("Hello World"); <span class="co" id="5418101691260113399-co"><img src="images/callouts/4.png" alt="(4)"></span> 
+      session.save(); <span class="co" id="1376424878148439201-co"><img src="images/callouts/5.png" alt="(5)"></span> 
     }
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">finally</span>
+    finally
     {
-      session.close(); <span class="co" id="8611533902647318308-co"><img src="images/callouts/6.png" alt="(6)"></span> 
+      session.close(); <span class="co" id="6251957601283766431-co"><img src="images/callouts/6.png" alt="(6)"></span> 
     }
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
                 <p>Any Chromattic interaction requires to open a session</p>
@@ -232,51 +236,51 @@
               </td></tr></table></div></div>
         </div>
       </div>
-      <div class="section" title="1.1.4.&nbsp;Project build"><div class="titlepage"><div><div><h3 class="title"><a name="d5e222"></a>1.1.4.&nbsp;Project build</h3></div></div></div>
+      <div class="section" title="Project build"><div class="titlepage"><div><div><h3 class="title"><a name="d5e222"></a>Project build</h3></div></div></div>
         
         <p>The project build is an important piece of the software infrastructure and Chromattic has been developped to integrate seamlessly with the build.</p>
         <p>Chromattic leverages the <a class="ulink" href="http://java.sun.com/javase/6/docs/technotes/guides/apt/index.html" target="_top">Java<sup>tm</sup> 6 Annotation Processor Tool</a> (abbreviated as APT) that works at the Java<sup>tm</sup>compiler level and therefore there is nothing much to do to integrate Chromattic in the build itself.</p>
         <p>As many Object Relational Mapping tool, Chromattic needs a bit of instrumentation to make the magic work. Chromattic does not modify existing classes, it takes the existing classes and adds new classes and that is achieved thanks to the APT plugin. It means that instrumentation is performed at the compilation time by generating Java<sup>tm</sup>source file that are compiled by the compiler instead of generating those classes at the load time in the virtual machine.</p>
         <p>The only condition to enable Chromattic instrumentation is to have the Chromattic APT jar on the compilation classpath. Nothing more, nothing less.</p>
-        <div class="section" title="1.1.4.1.&nbsp;Building with Maven"><div class="titlepage"><div><div><h4 class="title"><a name="d5e232"></a>1.1.4.1.&nbsp;Building with Maven</h4></div></div></div>
+        <div class="section" title="Building with Maven"><div class="titlepage"><div><div><h4 class="title"><a name="d5e232"></a>Building with Maven</h4></div></div></div>
           
           <p>Building with Maven is very easy and only requires a dependency on the Chromattic API and APT module in your pom file.</p>
-          <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+          <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
               <p>The API dependency provides the Chromattic API classes prefixed with the <code class="code">org.chromattic.api</code> package.</p>
-              <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;dependency&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;groupId&gt;</span>org.chromattic<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/groupId&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;artifactId&gt;</span>chromattic.api<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/artifactId&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/dependency&gt;</span></pre></div>
+              <div class="programlistingco"><pre class="programlisting language-xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.chromattic&lt;/groupId&gt;
+  &lt;artifactId&gt;chromattic.api&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre></div>
             </li><li class="listitem">
               <p>The APT dependency triggers the Chromattic instrumentation.</p>
-              <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;dependency&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;groupId&gt;</span>org.chromattic<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/groupId&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;artifactId&gt;</span>chromattic.apt<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/artifactId&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/dependency&gt;</span></pre></div>
+              <div class="programlistingco"><pre class="programlisting language-xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.chromattic&lt;/groupId&gt;
+  &lt;artifactId&gt;chromattic.apt&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre></div>
             </li></ul></div>
           <p>And that's it, we have just configured our project. </p>
         </div>
       </div>
-      <div class="section" title="1.1.5.&nbsp;Running the client"><div class="titlepage"><div><div><h3 class="title"><a name="d5e248"></a>1.1.5.&nbsp;Running the client</h3></div></div></div>
+      <div class="section" title="Running the client"><div class="titlepage"><div><div><h3 class="title"><a name="d5e248"></a>Running the client</h3></div></div></div>
         
         <p>The client requires different jars for running</p>
         <p>todo : provide an uber client jar</p>
       </div>
     </div>
   </div>
-  <div class="chapter" title="Chapter&nbsp;2.&nbsp;Type mapping"><div class="titlepage"><div><div><h1 xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook"><a name="d5e252"></a>Chapter&nbsp;2.&nbsp;Type mapping</h1></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;2.&nbsp;Type mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e252"></a>Chapter&nbsp;2.&nbsp;Type mapping</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><ul><li><span class="section"><a href="#d5e255">Primary type mapping</a></span></li><li><span class="section"><a href="#d5e259">Property mapping</a></span><ul><li><span class="section"><a href="#d5e261">Property type mapping</a></span></li><li><span class="section"><a href="#d5e360">Simple property mapping</a></span></li><li><span class="section"><a href="#d5e432">Residual property mapping</a></span></li></ul></li></ul></div>
     
     <p>Chromattic establishes a correspondance between a Java class and a JCR node type. In most case there is a trivial mapping between a Java class and a JCR node type, however both models are not the same. Chromattic offers solutions for mapping JCR concepts like mixin and multiple type inheritance which are not native to the Java language.</p>
-    <div class="section" title="2.1.&nbsp;Primary type mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e255"></a>2.1.&nbsp;Primary type mapping</h2></div></div></div>
+    <div class="section" title="Primary type mapping"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e255"></a>Primary type mapping</h2></div></div></div>
       
       <p>The <code class="code">org.chromattic.api.annotations.PrimaryType</code> annotation creates a unique correspondance between a Java class and JCR primary node type. The mapping between an annotated class and the primary type must be unique for the JCR node type, therefore it is not possible to have the same node type mapped to more than one class inside the same Chromattic application.</p>
     </div>
-    <div class="section" title="2.2.&nbsp;Property mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e259"></a>2.2.&nbsp;Property mapping</h2></div></div></div>
+    <div class="section" title="Property mapping"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e259"></a>Property mapping</h2></div></div></div>
       
-      <div class="section" title="2.2.1.&nbsp;Property type mapping"><div class="titlepage"><div><div><h3 class="title"><a name="d5e261"></a>2.2.1.&nbsp;Property type mapping</h3></div></div></div>
+      <div class="section" title="Property type mapping"><div class="titlepage"><div><div><h3 class="title"><a name="d5e261"></a>Property type mapping</h3></div></div></div>
         
         <p>JCR defines the following set of property types:</p>
-        <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+        <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
             <p>The <code class="code">STRING</code> type</p>
           </li><li class="listitem">
             <p>The <code class="code">BOOLEAN</code> type</p>
@@ -298,10 +302,10 @@
         <p>Any of those types except the <code class="code">REFERENCE</code> type can be mapped to an object property.</p>
         <p>
           <code class="code">REFERENCE</code> types can be used, however this type is not mapped to a specific Java type, instead Chromattic supports it thanks to the concept of relationship that will be explained in the <a class="xref" href="#reference_relationship_section" title="Chapter&nbsp;4.&nbsp;Reference mapping">Chapter&nbsp;4, <i>Reference mapping </i></a>.</p>
-        <div class="section" title="2.2.1.1.&nbsp;Generic data types"><div class="titlepage"><div><div><h4 class="title"><a name="d5e297"></a>2.2.1.1.&nbsp;Generic data types</h4></div></div></div>
+        <div class="section" title="Generic data types"><div class="titlepage"><div><div><h4 class="title"><a name="d5e297"></a>Generic data types</h4></div></div></div>
           
           <p>JCR provides two types to map generic data types:</p>
-          <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+          <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
               <p>The JCR <code class="code">STRING</code> type is mapped to the Java <code class="code">java.lang.String</code> type.</p>
             </li><li class="listitem">
               <p>The JCR <code class="code">BINARY</code> type is mapped to the Java <code class="code">byte[]</code> type or the  <code class="code">java.io.InputStream</code> type.</p>
@@ -312,10 +316,10 @@
           <p>To read the data, the property getter returns an input stream that provides access to the binary data. The stream should be used as any other kind of input stream: consume data until the stream is empty and then close the stream in a finally block. The stream must be used corrected, otherwise the entire content could be loaded in memory and that would defeat the purpose of the stream based approach.</p>
           <p>To write data, the property setter must be called with an input stream that is used to consume all the data available. It means that on the return of the setter, the input stream shouldn't be used anymore for reading data as Chromattic will close the stream. Again here, the stream must be used carefully.</p>
         </div>
-        <div class="section" title="2.2.1.2.&nbsp;Primitive types"><div class="titlepage"><div><div><h4 class="title"><a name="d5e318"></a>2.2.1.2.&nbsp;Primitive types</h4></div></div></div>
+        <div class="section" title="Primitive types"><div class="titlepage"><div><div><h4 class="title"><a name="d5e318"></a>Primitive types</h4></div></div></div>
           
           <p>The types <code class="code">BOOLEAN</code>, <code class="code">LONG</code> and <code class="code">DOUBLE</code> are mapped to Java primitive types:</p>
-          <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+          <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
               <p>The JCR <code class="code">BOOLEAN</code> type is mapped to the Java <code class="code">boolean</code> type</p>
             </li><li class="listitem">
               <p>The JCR <code class="code">LONG</code> type is mapped to either the Java <code class="code">int</code> or <code class="code">long</code> type</p>
@@ -324,7 +328,7 @@
             </li></ul></div>
           <p>For each of those types, there is the choice between either the Java primitive type or the Java wrapper type.</p>
         </div>
-        <div class="section" title="2.2.1.3.&nbsp;Temporal type"><div class="titlepage"><div><div><h4 class="title"><a name="d5e340"></a>2.2.1.3.&nbsp;Temporal type</h4></div></div></div>
+        <div class="section" title="Temporal type"><div class="titlepage"><div><div><h4 class="title"><a name="d5e340"></a>Temporal type</h4></div></div></div>
           
           <p>JCR defines a <code class="code">DATE</code> type that represents a date. Chromattic provides three different mappings for this type:</p>
           <div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
@@ -344,100 +348,100 @@
           <p>Date objects objects are mutable by nature and Chromattic clones them when it is necessary to preserve the data. A date object returned by Chromattic can be modified without changing mapped JCR value, likewise a property update will read the value once and copy it.</p>
         </div>
       </div>
-      <div class="section" title="2.2.2.&nbsp;Simple property mapping"><div class="titlepage"><div><div><h3 class="title"><a name="d5e360"></a>2.2.2.&nbsp;Simple property mapping</h3></div></div></div>
+      <div class="section" title="Simple property mapping"><div class="titlepage"><div><div><h3 class="title"><a name="d5e360"></a>Simple property mapping</h3></div></div></div>
         
         <p>The <code class="code">org.chromattic.api.annotations.Property</code> annotation binds an object to a node property. Our <code class="code">Page</code> shows several examples of property mapping using the <code class="code">@Property</code> annotation. This annotation has a mandatory <code class="code">name</code> parameter to provide the name of the corresponding JCR property.</p>
-        <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Retention(RetentionPolicy.RUNTIME)</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Target(ElementType.METHOD)</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@interface</span> Property {
+        <div class="programlistingco"><pre class="programlisting language-java">@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface Property {
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * The jcr property namen either qualified or unqualified.
    *
    * @return the jcr property name
-   */</span>
+   */
   String name();
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Specify the property type of the mapped property, the value must be a legal value referenced by
    * {@code javax.jcr.PropertyType}. The default value returned is -1 which means that the value is determined
    * by Chromattic according to the type of the annotated property.
    *
    * @return the property type value.
    * @since 1.1
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">int</span> type() <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">default</span> -<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-number">1</span>;
+   */
+  int type() default -1;
 
 }</pre></div>
         <p>The <code class="code">Property</code> annotation can either annotate the getter or annotate the setter but it should be used only once with read/write accessible properties.</p>
-        <div class="section" title="2.2.2.1.&nbsp;Single valued property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e372"></a>2.2.2.1.&nbsp;Single valued property mapping</h4></div></div></div>
+        <div class="section" title="Single valued property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e372"></a>Single valued property mapping</h4></div></div></div>
           
           <p>The most common mapping style between a single valued class and a node property. The object property must provide at least a setter method or a getter method, probably both in most use cases, those methods must use the same java property type.</p>
           <p>A property getter method returns the JCR property value. If the property does not exist, the null value is returned when the java property type is not a primitive type. Sometimes it can happen that the JCR property does not exist but this property is mapped to a primitive type. When the situation occurs Chromattic throws a <code class="code">NullPointerException</code>, that behavior is similar to what happens when a null value is unboxed to its corresponding primitive type.</p>
           <p>A property setter method updates the JCR property value when it is invoked. For non primitive type it is possible to delete the property by providing a null argument.</p>
-          <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+          <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the page title.
    *
    * @return the page title
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "title")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> String getTitle(); <span class="co" id="427207334100998446-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+   */
+  @Property(name = "title")
+  public abstract String getTitle(); <span class="co" id="5787825197906153989-co"><img src="images/callouts/1.png" alt="(1)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Updates the page title.
    *
    * @param title the new page title
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setTitle(String title);
+   */
+  public abstract void setTitle(String title);
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Returns the date of the page last modification.
    *
    * @return the date of the last modification
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "lastmodifieddate")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> Date getLastModifiedDate(); <span class="co" id="7284767287594776411-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+   */
+  @Property(name = "lastmodifieddate")
+  public abstract Date getLastModifiedDate(); <span class="co" id="4072821448123109598-co"><img src="images/callouts/2.png" alt="(2)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Updates the date of the page last modification.
    *
    * @param date the date of the last modification
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setLastModifiedDate(Date date);</pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
+   */
+  public abstract void setLastModifiedDate(Date date);</pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
                 <p>The title property is mapped the <code class="code">STRING</code> type</p>
               </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/2.png" alt="2" border="0"></p></td><td valign="top" align="left">
                 <p>the last modified date property is mapped to the <code class="code">DATE</code> type</p>
               </td></tr></table></div></div>
           <p>The corresponding JCR node defines a title property and lastModifiedDate property:</p>
-          <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;propertyDefinition</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">autoCreated</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">mandatory</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">multiple</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">name</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"title"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">onParentVersion</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"COPY"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">protected</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">requiredType</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"String"</span><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;valueConstraints/&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/propertyDefinition&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;propertyDefinition</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">autoCreated</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">mandatory</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">multiple</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">name</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"lastmodifieddate"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">onParentVersion</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"COPY"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">protected</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">requiredType</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"Date"</span><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;valueConstraints/&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/propertyDefinition&gt;</span>
+          <div class="programlistingco"><pre class="programlisting language-xml">&lt;propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="title" onParentVersion="COPY" protected="false" requiredType="String"&gt;
+  &lt;valueConstraints/&gt;
+&lt;/propertyDefinition&gt;
+&lt;propertyDefinition autoCreated="false" mandatory="false" multiple="false" name="lastmodifieddate" onParentVersion="COPY" protected="false" requiredType="Date"&gt;
+  &lt;valueConstraints/&gt;
+&lt;/propertyDefinition&gt;
 </pre></div>
         </div>
-        <div class="section" title="2.2.2.2.&nbsp;Multi valued property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e394"></a>2.2.2.2.&nbsp;Multi valued property mapping</h4></div></div></div>
+        <div class="section" title="Multi valued property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e394"></a>Multi valued property mapping</h4></div></div></div>
           
           <p>JCR naturally provide support for multi valued properties, so does Chromattic. Chromattic gives you the choice to use either an array or a <code class="code">java.util.List</code> to access the data. A primitive array can be used when the type is a primitive type.</p>
-          <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+          <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the list of the page tags.
    *
    * @return the list of tags
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "tags")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> List&lt;String&gt; getTags(); <span class="co" id="8615296300194867293-co"><img src="images/callouts/1.png" alt="(1)"></span> </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
+   */
+  @Property(name = "tags")
+  public abstract List&lt;String&gt; getTags(); <span class="co" id="5157576281876746722-co"><img src="images/callouts/1.png" alt="(1)"></span> </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
                 <p>the tags property is mapped to a multi valued <code class="code">STRING</code> type</p>
               </td></tr></table></div></div>
           <p>The corresponding JCR node defines a tags properties:</p>
-          <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;propertyDefinition</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">autoCreated</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">mandatory</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">multiple</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"true"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">name</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"tags"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">onParentVersion</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"COPY"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">protected</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"false"</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">requiredType</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"String"</span><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;valueConstraints/&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/propertyDefinition&gt;</span>
+          <div class="programlistingco"><pre class="programlisting language-xml">&lt;propertyDefinition autoCreated="false" mandatory="false" multiple="true" name="tags" onParentVersion="COPY" protected="false" requiredType="String"&gt;
+  &lt;valueConstraints/&gt;
+&lt;/propertyDefinition&gt;
 </pre></div>
           <p>When a list of values is returned by a getter method, any modification to this list is only visible to this list and does not affect the JCR property values. When the JCR property does not exist, a null value is returned to the caller.</p>
           <p>To update the values of a JCR property, the property setter has to be invoked. The list of values is read once and copied to the corresponding JCR property. If the list is null, it simply delete the property.</p>
         </div>
-        <div class="section" title="2.2.2.3.&nbsp;Mixing multi value and single value styles"><div class="titlepage"><div><div><h4 class="title"><a name="d5e412"></a>2.2.2.3.&nbsp;Mixing multi value and single value styles</h4></div></div></div>
+        <div class="section" title="Mixing multi value and single value styles"><div class="titlepage"><div><div><h4 class="title"><a name="d5e412"></a>Mixing multi value and single value styles</h4></div></div></div>
           
           <p>It can be convenient to map a single valued property to a multi valued property. For instance a multi valued JCR  property exposed as a single valued property provides access to the first value of the values.</p>
           <div class="informaltable">
@@ -446,45 +450,45 @@
           <p>The same multi valued JCR property can be exposed both as a single and multi valued property. The multi valued property gives access to the complete list of values and the single valued property is useful when the first value needs to be accessed.</p>
         </div>
       </div>
-      <div class="section" title="2.2.3.&nbsp;Residual property mapping"><div class="titlepage"><div><div><h3 class="title"><a name="d5e432"></a>2.2.3.&nbsp;Residual property mapping</h3></div></div></div>
+      <div class="section" title="Residual property mapping"><div class="titlepage"><div><div><h3 class="title"><a name="d5e432"></a>Residual property mapping</h3></div></div></div>
         
         <p>JCR provides the notion of residual properies which are denoted by a <code class="code">*</code> name. It provides a convenient and generic  storage for properties and can store pretty much any property name that is not already declared by the node  itself directly or by inheritance. Such property set is mapped in Chromattic thanks to the  <code class="code">org.chromattic.api.annotations.Properties</code> annotation:</p>
-        <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Retention(RetentionPolicy.RUNTIME)</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Target(ElementType.METHOD)</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@interface</span> Properties {
+        <div class="programlistingco"><pre class="programlisting language-java">@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface Properties {
 }</pre></div>
-        <div class="section" title="2.2.3.1.&nbsp;Single valued residual property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e440"></a>2.2.3.1.&nbsp;Single valued residual property mapping</h4></div></div></div>
+        <div class="section" title="Single valued residual property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e440"></a>Single valued residual property mapping</h4></div></div></div>
           
           <p>Such mapping is achieved by using the <code class="code">java.util.Map&lt;String, V&gt;</code> type where <code class="code">V</code> can be</p>
-          <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+          <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
               <p>a simple type mapped by Chromattic, such as <code class="code">String</code>, <code class="code">Integer</code>, etc... Such simple type is mapped to a JCR specific type, for  instance <code class="code">String</code> is mapped to the <code class="code">STRING</code> JCR property type.</p>
             </li><li class="listitem">
               <p>the <code class="code">java.lang.Object</code> type mapped to the <code class="code">UNDEFINED</code> JCR property type allowing a very generic storage, however that  kind of mapping is not type safe.</p>
             </li></ul></div>
         </div>
-        <div class="section" title="2.2.3.2.&nbsp;Multi valued residual property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e456"></a>2.2.3.2.&nbsp;Multi valued residual property mapping</h4></div></div></div>
+        <div class="section" title="Multi valued residual property mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e456"></a>Multi valued residual property mapping</h4></div></div></div>
           
           <p>Likewise Chromattic is able to manage multi valued simple properties, the support of multi valued residual properties is available thanks to the usage of the <code class="code">java.util.Map&lt;String, List&lt;V&gt;&gt;</code> type.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="chapter" title="Chapter&nbsp;3.&nbsp;Hierarchical mapping"><div class="titlepage"><div><div><h1 xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook"><a name="d5e460"></a>Chapter&nbsp;3.&nbsp;Hierarchical mapping</h1></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;3.&nbsp;Hierarchical mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e460"></a>Chapter&nbsp;3.&nbsp;Hierarchical mapping</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><ul><li><span class="section"><a href="#hierarchical_onetomany_section">One-to-many/many-to-one hierarchical relationship mapping </a></span><ul><li><span class="section"><a href="#d5e503">Adding a child node</a></span></li><li><span class="section"><a href="#d5e540">Destroying a node</a></span></li><li><span class="section"><a href="#d5e565">Collection types</a></span></li></ul></li><li><span class="section"><a href="#d5e603">One-to-one hierarchical relationship mapping</a></span></li></ul></div>
     
     <p>Chromattic makes the usage of the JCR node hierarchy very natural thanks to relationship mapping. Chromattic defines two mapping styles one-to-many/many-to-one and one-to-one mapping. The one-to-one mapping is useful for accessing the particular child of a node, the one-to-many-many-to-one mapping is useful for accessing residual node definitions defined by a wildcard (*) name.</p>
-    <div class="section" title="3.1.&nbsp;One-to-many/many-to-one hierarchical relationship mapping"><div class="titlepage"><div><div><h2 class="title"><a name="hierarchical_onetomany_section"></a>3.1.&nbsp;One-to-many/many-to-one hierarchical relationship mapping </h2></div></div></div>
+    <div class="section" title="One-to-many/many-to-one hierarchical relationship mapping"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="hierarchical_onetomany_section"></a>One-to-many/many-to-one hierarchical relationship mapping </h2></div></div></div>
       
       <p>The usage of Java generics combined with different types of collection provides a flexible mapping. Java generics allows collection filtering based on the type of the collection, it becomes handy when you need to access the a subset of the child nodes filtered with a specific node type (make a chapter on genericity).</p>
       <p>Chromattic provides access to the children of node with a Java collection. A bean annotates a collection valued getter with the <code class="code">@OneToMany</code> annotation.</p>
-      <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+      <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the collection of page children.
    *
    * @return the children
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@OneToMany</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> Collection&lt;Page&gt; getChildren();</pre></div>
+   */
+  @OneToMany
+  public abstract Collection&lt;Page&gt; getChildren();</pre></div>
       <p>The getter method never returns a null value as a node always provides a set of children even if this set is empty. Unlike for multi valued property collection, any modification to this collection will be reflected directly by the underlying JCR node children and vice versa:</p>
-      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+      <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
           <p>The <code class="code">add(Page page)</code> adds a page</p>
         </li><li class="listitem">
           <p>The <code class="code">remove(Object o)</code> removes a page</p>
@@ -495,20 +499,20 @@
         </li></ul></div>
       <p>The other collection methods of the collection class are read methods that won't modify the children and provides various ways to deal with the children.</p>
       <p>The <code class="code">Page</code> object also provides to its parent with a property annotated with the <code class="code">ManyToOne</code> annotation. The getter  method returns the object associated to the parent node.</p>
-      <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+      <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the page parent.
    *
    * @return the parent
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@ManyToOne</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> Page getParent();
+   */
+  @ManyToOne
+  public abstract Page getParent();
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Update the page parent.
    *
    * @param page the parent
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setParent(Page page);</pre></div>
+   */
+  public abstract void setParent(Page page);</pre></div>
       <p> A null value can be obtained in two particular situations:</p>
       <div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
           <p>When an object is associated to the root node, indeed the root node is the only node without a parent</p>
@@ -516,14 +520,14 @@
           <p>When an object has a parent of a JCR node type that is not mapped to the Chromattic object returned the getter</p>
         </li></ol></div>
       <p>It is legal for an object to have several parent accessors when the corresponding JCR node type can have different parent node types. When the various parent types share a common parent class, this class can be used to have a single  accessor instead. Ultimately it is possible to use the <code class="code">java.lang.Object</code> type that is implicitely mapped to the <code class="code">nt:base</code> node typen, the <code class="code">nt:base</code> node type is the super type of all JCR node types. (todo: make a section about that somewhere else to clarify)</p>
-      <div class="section" title="3.1.1.&nbsp;Adding a child node"><div class="titlepage"><div><div><h3 class="title"><a name="d5e503"></a>3.1.1.&nbsp;Adding a child node</h3></div></div></div>
+      <div class="section" title="Adding a child node"><div class="titlepage"><div><div><h3 class="title"><a name="d5e503"></a>Adding a child node</h3></div></div></div>
         
         <p>There are several ways for adding a child and we are going to examine two of them in this section.</p>
         <p>The first way to add a child is to use the collection returned by the parent object. As said earlier, any modification to the collection is directly reflected into the corresponding JCR node.</p>
-        <div class="programlistingco"><pre class="programlisting">    Page child = session.create(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>, <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"bar"</span>); <span class="co" id="852375014697239234-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    Collection&lt;Page&gt; children = page.getChildren(); <span class="co" id="3251614159770946446-co"><img src="images/callouts/2.png" alt="(2)"></span> 
-    children.add(child); <span class="co" id="8236304002852859351-co"><img src="images/callouts/3.png" alt="(3)"></span> 
-    assertSame(page, child.getParent()); <span class="co" id="525559402232905756-co"><img src="images/callouts/4.png" alt="(4)"></span> 
+        <div class="programlistingco"><pre class="programlisting language-java">    Page child = session.create(Page.class, "bar"); <span class="co" id="5939050285971499475-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    Collection&lt;Page&gt; children = page.getChildren(); <span class="co" id="1390397588373919994-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+    children.add(child); <span class="co" id="709193500919881585-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+    assertSame(page, child.getParent()); <span class="co" id="8830664981232555068-co"><img src="images/callouts/4.png" alt="(4)"></span> 
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
               <p>Create the transient page object</p>
             </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/2.png" alt="2" border="0"></p></td><td valign="top" align="left">
@@ -534,9 +538,9 @@
               <p>The parent is set to foo</p>
             </td></tr></table></div></div>
         <p>The second way is to use to add a child is to use the parent setter.</p>
-        <div class="programlistingco"><pre class="programlisting">    Page child = session.create(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>, <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"bar"</span>); <span class="co" id="4555952522375760344-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    child.setParent(page); <span class="co" id="2792201869760098082-co"><img src="images/callouts/2.png" alt="(2)"></span> 
-    assertTrue(page.getChildren().contains(child)); <span class="co" id="2802967660202189573-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+        <div class="programlistingco"><pre class="programlisting language-java">    Page child = session.create(Page.class, "bar"); <span class="co" id="6805964394205893916-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    child.setParent(page); <span class="co" id="1242551283807183916-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+    assertTrue(page.getChildren().contains(child)); <span class="co" id="6552674916312615526-co"><img src="images/callouts/3.png" alt="(3)"></span> 
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
               <p>Create the transient page object</p>
             </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/2.png" alt="2" border="0"></p></td><td valign="top" align="left">
@@ -547,68 +551,68 @@
         <p>Setting the parent to the child has the same effect than adding the child to the collection. Indeed we can notice in both examples that the when one style is used, we get the same result: the parent getter returns the parent object and the children collection contains the child.</p>
         <p>In both case, Chromattic will use the name set on the child before it is inserted in its parent. The session <code class="code">create</code> method call takes as second argument the name of the future child. This name is stored temporarily on the create child and is used when the node is effectively inserted.</p>
       </div>
-      <div class="section" title="3.1.2.&nbsp;Destroying a node"><div class="titlepage"><div><div><h3 class="title"><a name="d5e540"></a>3.1.2.&nbsp;Destroying a node</h3></div></div></div>
+      <div class="section" title="Destroying a node"><div class="titlepage"><div><div><h3 class="title"><a name="d5e540"></a>Destroying a node</h3></div></div></div>
         
         <p>We have explained two ways for adding a child to a parent, we will now see that we can use the same methods to destroy a node and its relationship to its parent (indeed in JCR, the only node with no parent is the root node).</p>
         <p>When a child is removed from its parent collection, it is removed.</p>
-        <div class="programlistingco"><pre class="programlisting">    children.remove(child); <span class="co" id="836173916054297478-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    assertFalse(page.getChildren().contains(child)); <span class="co" id="7425139291017782328-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+        <div class="programlistingco"><pre class="programlisting language-java">    children.remove(child); <span class="co" id="4486685538173408578-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    assertFalse(page.getChildren().contains(child)); <span class="co" id="153824696356072562-co"><img src="images/callouts/2.png" alt="(2)"></span> 
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
               <p>Removing the child from the collection destroys the child</p>
             </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/2.png" alt="2" border="0"></p></td><td valign="top" align="left">
               <p>And the parent does not contain the child anymore</p>
             </td></tr></table></div></div>
         <p>Setting the parent of a Chromattic object to null forces Chromattic to remove the object and the associated node.</p>
-        <div class="programlistingco"><pre class="programlisting">    child.setParent(null); <span class="co" id="2538363664410731828-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    assertFalse(page.getChildren().contains(child)); <span class="co" id="254223201626822656-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+        <div class="programlistingco"><pre class="programlisting language-java">    child.setParent(null); <span class="co" id="2686132694199134709-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    assertFalse(page.getChildren().contains(child)); <span class="co" id="7570914766258238877-co"><img src="images/callouts/2.png" alt="(2)"></span> 
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
               <p>Setting the parent to null destroys the child</p>
             </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/2.png" alt="2" border="0"></p></td><td valign="top" align="left">
               <p>And the parent does not contain the child anymore</p>
             </td></tr></table></div></div>
       </div>
-      <div class="section" title="3.1.3.&nbsp;Collection types"><div class="titlepage"><div><div><h3 class="title"><a name="d5e565"></a>3.1.3.&nbsp;Collection types</h3></div></div></div>
+      <div class="section" title="Collection types"><div class="titlepage"><div><div><h3 class="title"><a name="d5e565"></a>Collection types</h3></div></div></div>
         
         <p>In our example we have examined the <code class="code">ManyToOne</code> side of the relationship based on a <code class="code">java.util.Collection</code> interface. Two other type of mapping are available <code class="code">java.util.List</code> and <code class="code">java.util.Map</code>, let's study what would become our example with such mappings.</p>
-        <div class="section" title="3.1.3.1.&nbsp; java.util.List mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e572"></a>3.1.3.1.&nbsp;
+        <div class="section" title="java.util.List mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e572"></a>
             <code class="code">java.util.List</code> mapping</h4></div></div></div>
           
           <p>The list mapping must be only used when the corresponding node type has defined its children to be ordered. The list interface adds the notion of order to the collection interface, and using the order oriented method on the list will affect the order of the children.</p>
           <p>
             </p><div class="example"><a name="d5e577"></a><p class="title"><b>Example&nbsp;3.1.&nbsp;Moving a child from the first position to the last position</b></p><div class="example-contents">
               
-              <div class="programlistingco"><pre class="programlisting">children.add(children.get(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-number">0</span>));</pre></div>
+              <div class="programlistingco"><pre class="programlisting language-java">children.add(children.get(0));</pre></div>
             </div></div><p><br class="example-break">
           </p>
         </div>
-        <div class="section" title="3.1.3.2.&nbsp; java.util.Map mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e582"></a>3.1.3.2.&nbsp;
+        <div class="section" title="java.util.Map mapping"><div class="titlepage"><div><div><h4 class="title"><a name="d5e582"></a>
             <code class="code">java.util.Map</code> mapping</h4></div></div></div>
           
           <p>The map interface adds the notion of key which is very useful when the children needs to be accessed by their key. Previously we have seen that when the child is created from the session, its name has to be specifed. When the map interface is used, this is not necessary anymore, as the child name is specified when it is inserted with the <code class="code">put(String key, Page value)</code> operation.</p>
           <p>
             </p><div class="example"><a name="d5e588"></a><p class="title"><b>Example&nbsp;3.2.&nbsp;Child insertion</b></p><div class="example-contents">
               
-              <div class="programlistingco"><pre class="programlisting">Page page = session.create(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>);
-children.put(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"foo"</span>, page);</pre></div>
+              <div class="programlistingco"><pre class="programlisting language-java">Page page = session.create(Page.class);
+children.put("foo", page);</pre></div>
             </div></div><p><br class="example-break">
             </p><div class="example"><a name="d5e593"></a><p class="title"><b>Example&nbsp;3.3.&nbsp;Obtaining a particular child</b></p><div class="example-contents">
               
-              <div class="programlistingco"><pre class="programlisting">Page foo = children.get(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"foo"</span>);</pre></div>
+              <div class="programlistingco"><pre class="programlisting language-java">Page foo = children.get("foo");</pre></div>
             </div></div><p><br class="example-break">
             </p><div class="example"><a name="d5e598"></a><p class="title"><b>Example&nbsp;3.4.&nbsp;Child removal</b></p><div class="example-contents">
               
-              <div class="programlistingco"><pre class="programlisting">children.remove(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"foo"</span>);</pre></div>
+              <div class="programlistingco"><pre class="programlisting language-java">children.remove("foo");</pre></div>
             </div></div><p><br class="example-break">
           </p>
         </div>
       </div>
     </div>
-    <div class="section" title="3.2.&nbsp;One-to-one hierarchical relationship mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e603"></a>3.2.&nbsp;One-to-one hierarchical relationship mapping</h2></div></div></div>
+    <div class="section" title="One-to-one hierarchical relationship mapping"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e603"></a>One-to-one hierarchical relationship mapping</h2></div></div></div>
       
-      <p>In the <a class="xref" href="#hierarchical_onetomany_section" title="3.1.&nbsp;One-to-many/many-to-one hierarchical relationship mapping">Section&nbsp;3.1, &#8220;One-to-many/many-to-one hierarchical relationship mapping &#8221;</a> we explained how to map a node and a its children. One to one hierarchical mapping is about mapping a node and one of its named children thanks to a one-to-one relationship. The most important difference between the two mapping styles is that a one-to-one relationship acts on a precise child defined by its name.</p>
+      <p>In the <a class="xref" href="#hierarchical_onetomany_section" title="One-to-many/many-to-one hierarchical relationship mapping">the section called &#8220;One-to-many/many-to-one hierarchical relationship mapping &#8221;</a> we explained how to map a node and a its children. One to one hierarchical mapping is about mapping a node and one of its named children thanks to a one-to-one relationship. The most important difference between the two mapping styles is that a one-to-one relationship acts on a precise child defined by its name.</p>
       <p>In our example, this type of relationship is used to model the relationship between a website and the root of the page hierarchy of this website. The <code class="code">WebSite</code> object is mapped to the <span class="italic">website</span> node and this node has a child named <span class="italic">rootpage</span>. The one-to-one relationship between <code class="code">WebSite</code> objects and <code class="code">Page</code> objects is precisely defined for the <span class="italic">rootpage</span> child of the <span class="italic">website</span> node.</p>
       <p>Mapping one-to-many/many-to-one hierarchical relationship was only requiring the <code class="code">@OneToMany</code> and <code class="code">@ManyToOne</code> annotations. One-to-one relationship mapping requires two additional annotations:</p>
-      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+      <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
           <p>The <code class="code">@Owner</code> annotation makes the distinction between the parent and the child of the relationship. The parent object  must be annotated with the <code class="code">@Owner</code> annotation and the child not.</p>
         </li><li class="listitem">
           <p>The <code class="code">@MappedBy</code> annotation provides the name of the node by which the relationship is maintained. It contains a single parameter the is the name of the child.</p>
@@ -616,39 +620,39 @@ children.put(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.o
       <p>
         </p><div class="example"><a name="d5e627"></a><p class="title"><b>Example&nbsp;3.5.&nbsp;The rootPage property</b></p><div class="example-contents">
           
-          <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+          <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the root page of the website.
    *
    * @return the root page
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Owner</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@OneToOne</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@MappedBy("root")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> Page getRootPage();
+   */
+  @Owner
+  @OneToOne
+  @MappedBy("root")
+  public abstract Page getRootPage();
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Sets the root page of the website.
    *
    * @param root the root page
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setRootPage(Page root);</pre></div>
+   */
+  public abstract void setRootPage(Page root);</pre></div>
         </div></div><p><br class="example-break">
         </p><div class="example"><a name="d5e632"></a><p class="title"><b>Example&nbsp;3.6.&nbsp;The site property</b></p><div class="example-contents">
           
-          <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+          <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the parent site.
    *
    * @return the parent site
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@OneToOne</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@MappedBy("root")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> WebSite getSite();</pre></div>
+   */
+  @OneToOne
+  @MappedBy("root")
+  public abstract WebSite getSite();</pre></div>
         </div></div><p><br class="example-break">
       </p>
       <p>/todo explain the dynamic of relationship life cycle</p>
-      <div class="programlistingco"><pre class="programlisting">    Page root = session.create(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>); <span class="co" id="6034594129746955595-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    site.setRootPage(root); <span class="co" id="5087703432415035172-co"><img src="images/callouts/2.png" alt="(2)"></span> 
-    assertEquals(site, root.getSite()); <span class="co" id="6466560235666372451-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+      <div class="programlistingco"><pre class="programlisting language-java">    Page root = session.create(Page.class); <span class="co" id="7510318940980091917-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    site.setRootPage(root); <span class="co" id="4060868025086322285-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+    assertEquals(site, root.getSite()); <span class="co" id="6862937983091286231-co"><img src="images/callouts/3.png" alt="(3)"></span> 
     session.save();
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
             <p>Create the transient page object</p>
@@ -657,105 +661,106 @@ children.put(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.o
           </td></tr><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/3.png" alt="3" border="0"></p></td><td valign="top" align="left">
             <p>The parent of the root page is the site object</p>
           </td></tr></table></div></div>
-      <div class="programlistingco"><pre class="programlisting">    site.setRootPage(null); <span class="co" id="1900064193124004638-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+      <div class="programlistingco"><pre class="programlisting language-java">    site.setRootPage(null); <span class="co" id="620733873665686228-co"><img src="images/callouts/1.png" alt="(1)"></span> 
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
             <p>Setting the root page to null destroys the relationship</p>
           </td></tr></table></div></div>
     </div>
   </div>
-  <div class="chapter" title="Chapter&nbsp;4.&nbsp;Reference mapping"><div class="titlepage"><div><div><h1 xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook"><a name="reference_relationship_section"></a>Chapter&nbsp;4.&nbsp;Reference mapping </h1></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;4.&nbsp;Reference mapping"><div class="titlepage"><div><div><h2 class="title"><a name="reference_relationship_section"></a>Chapter&nbsp;4.&nbsp;Reference mapping </h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><ul><li><span class="section"><a href="#d5e673">One-to-many/many-to-one reference relationship mapping</a></span></li><li><span class="section"><a href="#d5e712">One-to-many/many-to-one path relationship mapping</a></span></li></ul></div>
     
     <p>The hierarchical tree structure supported by JCR is the default way to organize data. JCR provides a reference mechanism for relationship between nodes, a node has a pointer to target node via a property. The relationship is based on two specific property types:</p>
-    <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+    <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
         <p>The <code class="code">REFERENCE</code> property type references a target node using its UUID.</p>
       </li><li class="listitem">
         <p>The <code class="code">PATH</code> property type references a target node using its path.</p>
       </li></ul></div>
     <p>The single kind of relationship supported by reference is one-to-many/many-to-one: a node references a target node and a node can be the target of multiple nodes.</p>
-    <div class="note" title="Note">
+    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
       <p>Technically it should be possible to support many-to-many relationship using a multivalued reference property. This feature could be implemented in the future.</p>
     </div>
-    <div class="section" title="4.1.&nbsp;One-to-many/many-to-one reference relationship mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e673"></a>4.1.&nbsp;One-to-many/many-to-one reference relationship mapping</h2></div></div></div>
+    <div class="section" title="One-to-many/many-to-one reference relationship mapping"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e673"></a>One-to-many/many-to-one reference relationship mapping</h2></div></div></div>
       
-      <p>Mapping single valued reference properties to Chromattic relationship relationship relies on Java collections, in a similar  manner hierarchical <a class="link" href="#hierarchical_onetomany_section" title="3.1.&nbsp;One-to-many/many-to-one hierarchical relationship mapping">one-to-many/many-to-one relationship</a> does.</p>
+      <p>Mapping single valued reference properties to Chromattic relationship relationship relies on Java collections, in a similar  manner hierarchical <a class="link" href="#hierarchical_onetomany_section" title="One-to-many/many-to-one hierarchical relationship mapping">one-to-many/many-to-one relationship</a> does.</p>
       <p>The <code class="code">@OneToMany</code> and <code class="code">@ManyToOne</code> annotations declares the relationship, however as it is not a hierarchical parent child relationship, the type of the annotation must be set to <code class="code">RelatonshipType.REFERENCE</code>.</p>
       <p>The <code class="code">Page</code> object has a reference to a <code class="code">Content</code> object. The <code class="code">@ManyToOne(type = RelationshipType.REFERENCE)</code> annotation on the   <span class="italic">content</span> property of <code class="code">Page</code> object declares the relationship from the <code class="code">Page</code> side.</p>
       <p>
         </p><div class="informalexample">
-          <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+          <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns the content associated to this page.
    *
    * @return the content
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@ManyToOne(type = RelationshipType.REFERENCE)</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@MappedBy("content")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> Content getContent();
+   */
+  @ManyToOne(type = RelationshipType.REFERENCE)
+  @MappedBy("content")
+  public abstract Content getContent();
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * Set thet content on this page
    *
    * @param content the content
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> setContent(Content content);</pre></div>
+   */
+  public abstract void setContent(Content content);</pre></div>
         </div><p>
       </p>
-      <p>Conversely the <code class="code">Content</code> object owns a collection of <code class="code">Page</code> objects, each of those having a reference pointing to this object. The <code class="code">#OneToMany(type = RelationshipType.REFERENCE)</code> annotation on the <span class="italic">pages</span> property declares the relationship from the <code class="code">Content</code> side. Unlike the <a class="link" href="#hierarchical_onetomany_section" title="3.1.&nbsp;One-to-many/many-to-one hierarchical relationship mapping">one-to-many</a> relationship, the only possible type of collection is the <code class="code">java.util.Collection</code> interface because there isn't any notion of order, not name in such relationship.</p>
+      <p>Conversely the <code class="code">Content</code> object owns a collection of <code class="code">Page</code> objects, each of those having a reference pointing to this object. The <code class="code">#OneToMany(type = RelationshipType.REFERENCE)</code> annotation on the <span class="italic">pages</span> property declares the relationship from the <code class="code">Content</code> side. Unlike the <a class="link" href="#hierarchical_onetomany_section" title="One-to-many/many-to-one hierarchical relationship mapping">one-to-many</a> relationship, the only possible type of collection is the <code class="code">java.util.Collection</code> interface because there isn't any notion of order, not name in such relationship.</p>
       <p>
         </p><div class="informalexample">
-          <div class="programlistingco"><pre class="programlisting">  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+          <div class="programlistingco"><pre class="programlisting language-java">  /**
    * Returns all the pages associated with this content.
    *
    * @return the associated pages
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@OneToMany(type = RelationshipType.REFERENCE)</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@MappedBy("content")</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">public</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">abstract</span> Collection&lt;Page&gt; getPages();</pre></div>
+   */
+  @OneToMany(type = RelationshipType.REFERENCE)
+  @MappedBy("content")
+  public abstract Collection&lt;Page&gt; getPages();</pre></div>
         </div><p>
       </p>
       <p>Again here, the relationship between two objects is established when a <code class="code">Page</code> object is added to the pages collection of a <code class="code">Content</code> object or when a <code class="code">Content</code> object is set by invoking the <code class="code">setContent(Content content)</code> method on the <code class="code">Page</code> object.</p>
     </div>
-    <div class="section" title="4.2.&nbsp;One-to-many/many-to-one path relationship mapping"><div class="titlepage"><div><div><h2 class="title"><a name="d5e712"></a>4.2.&nbsp;One-to-many/many-to-one path relationship mapping</h2></div></div></div>
+    <div class="section" title="One-to-many/many-to-one path relationship mapping"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e712"></a>One-to-many/many-to-one path relationship mapping</h2></div></div></div>
       
       <p>/todo /todo</p>
     </div>
   </div>
-  <div class="chapter" title="Chapter&nbsp;5.&nbsp;Groovy integration"><div class="titlepage"><div><div><h1 xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook"><a name="d5e715"></a>Chapter&nbsp;5.&nbsp;Groovy integration</h1></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;5.&nbsp;Groovy integration"><div class="titlepage"><div><div><h2 class="title"><a name="d5e715"></a>Chapter&nbsp;5.&nbsp;Groovy integration</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><ul><li><span class="section"><a href="#d5e717">Differences with the java version</a></span></li><li><span class="section"><a href="#d5e741">Building a Groovy project with Chromattic</a></span><ul><li><span class="section"><a href="#d5e745">Building with Maven</a></span></li><li><span class="section"><a href="#d5e751">Building with ANT</a></span></li><li><span class="section"><a href="#d5e759">Compiling with <span class="italic">groovyc</span>
+        </a></span></li></ul></li><li><span class="section"><a href="#d5e768">Runtime dependencies</a></span></li><li><span class="section"><a href="#d5e775">How to access to JCR data through Chromattic objects in Groovy</a></span></li></ul></div>
     
-    <div class="section" title="5.1.&nbsp;Differences with the java version"><div class="titlepage"><div><div><h2 class="title"><a name="d5e717"></a>5.1.&nbsp;Differences with the java version</h2></div></div></div>
+    <div class="section" title="Differences with the java version"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e717"></a>Differences with the java version</h2></div></div></div>
       
       <p>In the Groovy version of Chromattic, the types are not abstract and annotations can be used directly on properties. The Chromattic engine in the Groovy version is exactly the same than the Java version. Actually Groovy and Java are interroperable</p>
-      <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+      <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
           <p>Groovy and Java Chromattic objects can be used in the same Chromattic application</p>
         </li><li class="listitem">
           <p>A Chromattic application can be used by both Java or Groovy code</p>
         </li></ul></div>
       <p>Before reading this part, you should already be familliar with Chromattic described in this guide. A simple example of code with the Groovy version of Chromattic : <code class="code">Page.groovy</code> (the equivalent of <a class="link" href="#getting_started_page_object">Page.java</a>) in Groovy is</p>
-      <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">package</span> org.chromattic.docs.reference.groovy
+      <div class="programlistingco"><pre class="programlisting language-java">package org.chromattic.docs.reference.groovy
 
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.annotations.Name
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.annotations.Property
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.annotations.PrimaryType
+import org.chromattic.api.annotations.Name
+import org.chromattic.api.annotations.Property
+import org.chromattic.api.annotations.PrimaryType
 
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+/**
  * @author &lt;a href="mailto:alain.defrance@exoplatform.com"&gt;Alain Defrance&lt;/a&gt;
  * @version $Revision$
- */</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@PrimaryType(name = "gs:page")</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span> Page {
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+ */
+@PrimaryType(name = "gs:page")
+class Page {
+  /**
    * The page name.
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Name</span> def String name <span class="co" id="475376738665233779-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+   */
+  @Name def String name <span class="co" id="8235862985958438767-co"><img src="images/callouts/1.png" alt="(1)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * The page title.
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "title")</span> def String title <span class="co" id="4261142308220634424-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+   */
+  @Property(name = "title") def String title <span class="co" id="4955993499277973986-co"><img src="images/callouts/2.png" alt="(2)"></span> 
 
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+  /**
    * The page content.
-   */</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-annotation">@Property(name = "content")</span> def String content <span class="co" id="2832098763316544716-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+   */
+  @Property(name = "content") def String content <span class="co" id="6028311909414595525-co"><img src="images/callouts/3.png" alt="(3)"></span> 
 }
 </pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><img src="images/callouts/1.png" alt="1" border="0"></p></td><td valign="top" align="left">
             <p>The name property is mapped to the node name</p>
@@ -765,77 +770,77 @@ children.put(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.o
             <p>The content property is mapped to the content node property</p>
           </td></tr></table></div></div>
     </div>
-    <div class="section" title="5.2.&nbsp;Building a Groovy project with Chromattic"><div class="titlepage"><div><div><h2 class="title"><a name="d5e741"></a>5.2.&nbsp;Building a Groovy project with Chromattic</h2></div></div></div>
+    <div class="section" title="Building a Groovy project with Chromattic"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e741"></a>Building a Groovy project with Chromattic</h2></div></div></div>
       
       <p>Chromattic is plugged to Groovy classes at compile time (this operation is based on AST transformation). So the only thing to do is to have the <span class="italic">chromattic.groovy</span> jar in the compilation classpath.</p>
-      <div class="section" title="5.2.1.&nbsp;Building with Maven"><div class="titlepage"><div><div><h3 class="title"><a name="d5e745"></a>5.2.1.&nbsp;Building with Maven</h3></div></div></div>
+      <div class="section" title="Building with Maven"><div class="titlepage"><div><div><h3 class="title"><a name="d5e745"></a>Building with Maven</h3></div></div></div>
         
         <p>Just add the Maven dependencies in the pom.xml.</p>
-        <div class="programlistingco"><pre class="programlisting">...
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;dependency&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;groupId&gt;</span>org.chromattic<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/groupId&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;artifactId&gt;</span>chromattic.groovy<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/artifactId&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;score&gt;</span>compile<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/score&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/dependency&gt;</span>
+        <div class="programlistingco"><pre class="programlisting language-xml">...
+&lt;dependency&gt;
+  &lt;groupId&gt;org.chromattic&lt;/groupId&gt;
+  &lt;artifactId&gt;chromattic.groovy&lt;/artifactId&gt;
+  &lt;score&gt;compile&lt;/score&gt;
+&lt;/dependency&gt;
 ...</pre></div>
       </div>
-      <div class="section" title="5.2.2.&nbsp;Building with ANT"><div class="titlepage"><div><div><h3 class="title"><a name="d5e751"></a>5.2.2.&nbsp;Building with ANT</h3></div></div></div>
+      <div class="section" title="Building with ANT"><div class="titlepage"><div><div><h3 class="title"><a name="d5e751"></a>Building with ANT</h3></div></div></div>
         
         <p>Add the <span class="italic">chromattic.groovy</span> jar in the classpath in the <span class="italic">build.xml</span>.</p>
-        <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;classpath&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;pathelement</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">path</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"${classpath}"</span><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">/&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;pathelement</span> <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-attribute">location</span>=<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-value">"lib/chromattic.groovy-1.1.0-SNAPSHOT-jar-with-dependencies.jar"</span><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">/&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/classpath&gt;</span></pre></div>
+        <div class="programlistingco"><pre class="programlisting language-xml">&lt;classpath&gt;
+  &lt;pathelement path="${classpath}"/&gt;
+  &lt;pathelement location="lib/chromattic.groovy-1.1.0-SNAPSHOT-jar-with-dependencies.jar"/&gt;
+&lt;/classpath&gt;</pre></div>
       </div>
-      <div class="section" title="5.2.3.&nbsp;Compiling with groovyc"><div class="titlepage"><div><div><h3 class="title"><a name="d5e759"></a>5.2.3.&nbsp;Compiling with <span class="italic">groovyc</span>
+      <div class="section" title="Compiling with groovyc"><div class="titlepage"><div><div><h3 class="title"><a name="d5e759"></a>Compiling with <span class="italic">groovyc</span>
         </h3></div></div></div>
         
         <p>Just add the <span class="italic">chromattic.groovy</span> jar in the classpath with the <code class="code">-classpath</code> argument </p><div class="programlistingco"><pre class="programlisting">groovyc Page.groovy -classpath chromattic.groovy-1.1.0-SNAPSHOT-jar-with-dependencies.jar</pre></div><p>
         </p>
       </div>
     </div>
-    <div class="section" title="5.3.&nbsp;Runtime dependencies"><div class="titlepage"><div><div><h2 class="title"><a name="d5e768"></a>5.3.&nbsp;Runtime dependencies</h2></div></div></div>
+    <div class="section" title="Runtime dependencies"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e768"></a>Runtime dependencies</h2></div></div></div>
       
       <p>To use Chromattic, you should have a JCR implementation in the runtime classpath. For example <span class="italic">chromattic.exo</span> Maven dependency:</p>
-      <div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;dependency&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;groupId&gt;</span>org.chromattic<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/groupId&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;artifactId&gt;</span>chromattic.exo<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/artifactId&gt;</span>
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;scope&gt;</span>runtime<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/scope&gt;</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-tag">&lt;/dependency&gt;</span></pre></div>
+      <div class="programlistingco"><pre class="programlisting language-xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.chromattic&lt;/groupId&gt;
+  &lt;artifactId&gt;chromattic.exo&lt;/artifactId&gt;
+  &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;</pre></div>
     </div>
-    <div class="section" title="5.4.&nbsp;How to access to JCR data through Chromattic objects in Groovy"><div class="titlepage"><div><div><h2 class="title"><a name="d5e775"></a>5.4.&nbsp;How to access to JCR data through Chromattic objects in Groovy</h2></div></div></div>
+    <div class="section" title="How to access to JCR data through Chromattic objects in Groovy"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e775"></a>How to access to JCR data through Chromattic objects in Groovy</h2></div></div></div>
       
-      <p>Simply access to the property content thanks to getter, setter or property : </p><div class="programlistingco"><pre class="programlisting"><span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">package</span> org.chromattic.docs.reference.groovy
+      <p>Simply access to the property content thanks to getter, setter or property : </p><div class="programlistingco"><pre class="programlisting language-java">package org.chromattic.docs.reference.groovy
 
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> junit.framework.TestCase
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.ChromatticBuilder
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.Chromattic
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.api.ChromatticSession
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">import</span> org.chromattic.docs.reference.groovy.Page
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-doccomment">/**
+import junit.framework.TestCase
+import org.chromattic.api.ChromatticBuilder
+import org.chromattic.api.Chromattic
+import org.chromattic.api.ChromatticSession
+import org.chromattic.docs.reference.groovy.Page
+/**
  * @author &lt;a href="mailto:alain.defrance@exoplatform.com"&gt;Alain Defrance&lt;/a&gt;
  * @version $Revision$
- */</span>
-<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span> GroovyTestCase <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">extends</span> TestCase {
-  <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">void</span> testGroovy() {
-    ChromatticBuilder builder = ChromatticBuilder.create(); <span class="co" id="2963385357572001297-co"><img src="images/callouts/1.png" alt="(1)"></span> 
-    builder.add(org.chromattic.docs.reference.groovy.Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>); <span class="co" id="369612268153354228-co"><img src="images/callouts/2.png" alt="(2)"></span> 
-    Chromattic chromattic = builder.build(); <span class="co" id="4332365390381792671-co"><img src="images/callouts/4.png" alt="(4)"></span> 
+ */
+class GroovyTestCase extends TestCase {
+  void testGroovy() {
+    ChromatticBuilder builder = ChromatticBuilder.create(); <span class="co" id="4587951496776234387-co"><img src="images/callouts/1.png" alt="(1)"></span> 
+    builder.add(org.chromattic.docs.reference.groovy.Page.class); <span class="co" id="956990762458071315-co"><img src="images/callouts/2.png" alt="(2)"></span> 
+    Chromattic chromattic = builder.build(); <span class="co" id="1089371323652233175-co"><img src="images/callouts/4.png" alt="(4)"></span> 
     
-    ChromatticSession session = chromattic.openSession(); <span class="co" id="6442286635999443316-co"><img src="images/callouts/5.png" alt="(5)"></span> 
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">try</span>
+    ChromatticSession session = chromattic.openSession(); <span class="co" id="8376361191375446586-co"><img src="images/callouts/5.png" alt="(5)"></span> 
+    try
     {
-      Page page = session.insert(Page.<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">class</span>, <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"index"</span>); <span class="co" id="682957973288215527-co"><img src="images/callouts/6.png" alt="(6)"></span> 
-      page.setTitle(<span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"Hello Page"</span>); <span class="co" id="695472326969411050-co"><img src="images/callouts/7.png" alt="(7)"></span> 
-      page.content = <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-string">"Hello World"</span>; <span class="co" id="2895751784921434942-co"><img src="images/callouts/8.png" alt="(8)"></span> 
-      session.save(); <span class="co" id="1955250214934543361-co"><img src="images/callouts/9.png" alt="(9)"></span> 
+      Page page = session.insert(Page.class, "index"); <span class="co" id="1999212452960725435-co"><img src="images/callouts/6.png" alt="(6)"></span> 
+      page.setTitle("Hello Page"); <span class="co" id="5069919494612500673-co"><img src="images/callouts/7.png" alt="(7)"></span> 
+      page.content = "Hello World"; <span class="co" id="3708608127418761970-co"><img src="images/callouts/8.png" alt="(8)"></span> 
+      session.save(); <span class="co" id="4943747761239187470-co"><img src="images/callouts/9.png" alt="(9)"></span> 
 
-      String title = page.title; <span class="co" id="8032824071535291596-co"><img src="images/callouts/10.png" alt="(10)"></span> 
-      String content = page.getContent(); <span class="co" id="4100809790238062272-co"><img src="images/callouts/11.png" alt="(11)"></span> 
+      String title = page.title; <span class="co" id="3770735793058767483-co"><img src="images/callouts/10.png" alt="(10)"></span> 
+      String content = page.getContent(); <span class="co" id="1300731534684792240-co"><img src="images/callouts/11.png" alt="(11)"></span> 
     }
-    <span xmlns:xslthl="http://xslthl.sf.net" xmlns:d="http://docbook.org/ns/docbook" class="hl-keyword">finally</span>
+    finally
     {
-      session.close(); <span class="co" id="1202226835124498523-co"><img src="images/callouts/3.png" alt="(3)"></span> 
+      session.close(); <span class="co" id="2746051599235260355-co"><img src="images/callouts/3.png" alt="(3)"></span> 
     }
   }
 }
